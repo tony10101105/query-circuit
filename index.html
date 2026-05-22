@@ -259,6 +259,79 @@
 <!-- End paper abstract -->
 
 
+<!-- Key Research Questions -->
+<section class="section" style="background: #fff; padding: 3rem 1.5rem;">
+  <div class="container is-max-desktop">
+    <div class="has-text-centered" style="margin-bottom: 2.5rem;">
+      <h2 class="title is-3" style="margin-bottom: 0.5rem;">Key Questions</h2>
+      <p class="is-size-6" style="color: #6b7280; max-width: 540px; margin: 0 auto;">Three core questions this paper asks — and answers.</p>
+    </div>
+
+    <div class="columns is-variable is-5">
+
+      <!-- Q1 -->
+      <div class="column">
+        <div style="border: 1px solid #e5e7eb; border-radius: 14px; padding: 2rem; height: 100%; display: flex; flex-direction: column; gap: 1rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 6px 24px rgba(37,99,235,0.12)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+          <div style="display: flex; align-items: center; gap: 0.85rem;">
+            <span style="background: #2563eb; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: 50%; width: 2rem; height: 2rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;">Q1</span>
+            <p class="is-size-6" style="font-weight: 700; color: #111827; line-height: 1.5; margin: 0;">
+              Can a sparse sub-network explain why an LLM answers one specific query the way it does?
+            </p>
+          </div>
+          <hr style="background: #e5e7eb; height: 1px; margin: 0;">
+          <div style="display: flex; gap: 0.6rem; align-items: flex-start;">
+            <span style="background: #dcfce7; color: #16a34a; font-weight: 700; font-size: 0.75rem; border-radius: 6px; padding: 0.2rem 0.5rem; flex-shrink: 0; margin-top: 2px;">Yes</span>
+            <p class="is-size-6" style="color: #374151; line-height: 1.65; margin: 0;">
+              Even for complex real-world questions (MMLU, ARC), a circuit covering only <strong>~1.3% of edges</strong> can recover <strong>~60% of model behavior</strong> on a single query. Compact, query-specific circuits exist and are findable.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="column">
+        <div style="border: 1px solid #e5e7eb; border-radius: 14px; padding: 2rem; height: 100%; display: flex; flex-direction: column; gap: 1rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 6px 24px rgba(37,99,235,0.12)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+          <div style="display: flex; align-items: center; gap: 0.85rem;">
+            <span style="background: #2563eb; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: 50%; width: 2rem; height: 2rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;">Q2</span>
+            <p class="is-size-6" style="font-weight: 700; color: #111827; line-height: 1.5; margin: 0;">
+              Is the standard evaluation metric (NFS) reliable for measuring query-level circuit quality?
+            </p>
+          </div>
+          <hr style="background: #e5e7eb; height: 1px; margin: 0;">
+          <div style="display: flex; gap: 0.6rem; align-items: flex-start;">
+            <span style="background: #fee2e2; color: #dc2626; font-weight: 700; font-size: 0.75rem; border-radius: 6px; padding: 0.2rem 0.5rem; flex-shrink: 0; margin-top: 2px;">No</span>
+            <p class="is-size-6" style="color: #374151; line-height: 1.65; margin: 0;">
+              NFS becomes numerically unstable on general datasets, with values routinely blowing past [0, 1]. We propose <strong>NDF (Normalized Deviation Faithfulness)</strong> — bounded in [0, 1] and symmetric around the model's true performance — as a drop-in replacement.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="column">
+        <div style="border: 1px solid #e5e7eb; border-radius: 14px; padding: 2rem; height: 100%; display: flex; flex-direction: column; gap: 1rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 6px 24px rgba(37,99,235,0.12)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+          <div style="display: flex; align-items: center; gap: 0.85rem;">
+            <span style="background: #2563eb; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: 50%; width: 2rem; height: 2rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;">Q3</span>
+            <p class="is-size-6" style="font-weight: 700; color: #111827; line-height: 1.5; margin: 0;">
+              Do existing circuit-discovery methods work well at the single-query level, and if not, what does?
+            </p>
+          </div>
+          <hr style="background: #e5e7eb; height: 1px; margin: 0;">
+          <div style="display: flex; gap: 0.6rem; align-items: flex-start;">
+            <span style="background: #fee2e2; color: #dc2626; font-weight: 700; font-size: 0.75rem; border-radius: 6px; padding: 0.2rem 0.5rem; flex-shrink: 0; margin-top: 2px;">No</span>
+            <p class="is-size-6" style="color: #374151; line-height: 1.65; margin: 0;">
+              Existing methods (e.g., EAP-IG) need ~50% of all edges before beating a random baseline per query. We propose <strong>Best-of-N (BoN) sampling</strong> — generating semantically equivalent paraphrases and picking the best-scoring circuit — which reduces required edges by <strong>~40×</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End Key Research Questions -->
+
+
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
