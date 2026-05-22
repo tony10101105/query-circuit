@@ -265,35 +265,42 @@
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
+        <img src="static/images/mmlu_marketing_nfs_instability_1.png" alt="Figure 1" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Figure 1: Case study of three queries from MMLU Marketing showing NFS' instability when applied to assess query circuits of different sizes.
         </h2>
       </div>
       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
+        <img src="static/images/nfs_ndf_comparison_2.png" alt="Figure 2" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          Figure 2: Evaluation results under NFS and NDF for the three queries adopted in Figure 1.
         </h2>
       </div>
       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
+        <img src="static/images/mmlu_astronomy_not_work_3.png" alt="Figure 3" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+          Figure 3: Case study on MMLU Astronomy showing that on complex queries, many edges may be needed to recover non-trivial circuits.
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/bon_main_framework_4.png" alt="Figure 4" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          Figure 4: The pipeline of Best-of-N sampling for discovering a faithful query circuit of N edges for an input query q, for which it generates p paraphrases. p = 3 in this illustration.
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/main_results_5.png" alt="Figure 5" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          Figure 5: Main results of BoN sampling for query circuit discovery. BoN substantially outperforms all other methods.
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/paired_statistical_test_6.png" alt="Table 1" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          Table 1: Bias reduction metrics for paired best- and worst-performing circuits (out of 10 per query) under gender-feature steering. Each pair consists of the best and worst circuit for the same query, matched by NDF. We report one-sided Wilcoxon signed-rank p-values and Rosenthal's r as effect size. Baseline probability bias before steering: |P(he) − P(she)| = 0.542 ± 0.031.
+        </h2>
+      </div>
     </div>
-  </div>
 </div>
 </div>
 </section>
